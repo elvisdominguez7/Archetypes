@@ -1,0 +1,1 @@
+INSERT INTO Demo-persistance.user (first_name,last_name) VALUES (:firstName, :lastName);

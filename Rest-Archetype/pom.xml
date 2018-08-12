@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.edominguez.tools.archetypes</groupId>
+	<artifactId>Rest-archetype</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>maven-archetype</packaging>
+
+	<name>Rest-archetype</name>
+
+
+	<description>Template For Spring Rest Services</description>
+
+	<url>http://edominguez.projects.archetypes/Rest/</url>
+
+	<developers>
+		<developer>
+			<id>edominguez</id>
+			<name>Elvis Dominguez</name>
+			<email>elvisdominguez7@gmail.com</email>
+			<organization>E-Dominguez Software, Inc.</organization>
+			<organizationUrl>E-Dominguez</organizationUrl>
+			<roles>
+				<role>Project lead</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/elvisdominguez7/Rest-Archetype.git</url>
+		<connection>scm:git:git://github.com/elvisdominguez7/Rest-Archetype.git</connection>
+		<developerConnection>scm:git:git@github.com:elvisdominguez7/Rest-Archetype.git</developerConnection>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>tools</id>
+			<name>tools</name>
+			<url>http://localhost:8081/repository/tools/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>tools</id>
+			<name>tools</name>
+			<url>http://localhost:8081/repository/tools/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>tools</id>
+			<name>tools</name>
+			<url>http://localhost:8081/repository/tools/</url>
+		</repository>
+	</distributionManagement>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>3.0.1</version>
+			</extension>
+		</extensions>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>3.0.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

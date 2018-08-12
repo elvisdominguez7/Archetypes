@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+       		http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+    		http://www.springframework.org/schema/jee 
+    		http://www.springframework.org/schema/jee/spring-jee.xsd">
+	   					   
+	
+	   					   	   					   
+<jee:jndi-lookup id="${artifactId}DS" jndi-name="jdbc/${artifactId}DS" expected-type="javax.sql.DataSource" />
+
+<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+   <property name="dataSource" ref="${artifactId}DS"></property>
+</bean>
+
+<bean id="createUser" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/createuser.sql" />		
+</bean>
+<bean id="retrieveUser" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/retrieveuser.sql" />		
+</bean>
+<bean id="retrieveAllUsers" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/retrieveallusers.sql" />		
+</bean>
+<bean id="updateUser" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/updateuser.sql" />		
+</bean>
+<bean id="deleteUser" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/deleteuser.sql" />		
+</bean>
+
+
+<bean id="createInvoice" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/createinvoice.sql" />		
+</bean>
+<bean id="retrieveInvoice" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/retrieveinvoice.sql" />		
+</bean>
+<bean id="retrieveAllinvoices" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/retrieveallinvoices.sql" />		
+</bean>
+<bean id="updateInvoice" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/updateinvoice.sql" />		
+</bean>
+<bean id="deleteInvoice" class="org.apache.commons.io.IOUtils" factory-method="toString">
+	<constructor-arg type="java.io.InputStream" value="classpath:/sql/deleteinvoice.sql" />		
+</bean>
+
+</beans>

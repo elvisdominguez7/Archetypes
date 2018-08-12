@@ -1,0 +1,146 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3a8287bf-7ab8-47e2-8906-4d0db3404192"
+	activeEnvironment="Default" name="SampleService-rs" soapui-version="5.3.0"
+	abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings />
+	<con:interface xsi:type="con:${parentArtifactId}Service"
+		id="6eb89e28-6f02-4833-ab2d-253b5fc36a53" wadlVersion="http://wadl.dev.java.net/2009/02"
+		name="http://localhost:8080" type="rest"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings />
+		<con:definitionCache />
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="${symbol_dollar}{artifactId}.user" path="/${symbol_dollar}{artifactId}.user"
+			id="32170a63-4d8c-4dd0-a105-aa073b95f066">
+			<con:settings />
+			<con:parameters />
+			<con:method name="Post" id="e00531c9-e809-405e-b6c5-a03387da195c"
+				method="POST">
+				<con:settings />
+				<con:parameters />
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>401 404 400 500 415 405</con:status>
+					<con:params />
+					<con:element
+						xmlns:user="http://localhost/SampleService-rs/create/${symbol_dollar}{artifactId}.user">user:Fault</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/json</con:mediaType>
+					<con:params />
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>201 200</con:status>
+					<con:params />
+					<con:element
+						xmlns:user="http://localhost/SampleService-rs/create/${symbol_dollar}{artifactId}.user">user:Response</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true" />
+					<con:status>200</con:status>
+					<con:params />
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="REQUEST">
+					<con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+					<con:params />
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true" />
+					<con:status>201</con:status>
+					<con:params />
+					<con:element>data</con:element>
+				</con:representation>
+				<con:request name="Create" id="68de2594-7fec-423e-89dc-6cafe96e0628"
+					mediaType="application/json" postQueryString="false">
+					<con:settings>
+						<con:setting
+							id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						<con:setting id="RecordRequestRepresentations">true</con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080/SampleService-rs/create
+					</con:endpoint>
+					<con:request>{
+						"id":2,
+						"firstName":"test2",
+						"lastName":"testing2"
+						}
+					</con:request>
+					<con:originalUri>http://localhost/SampleService-rs/create/${symbol_dollar}{artifactId}.user
+					</con:originalUri>
+					<con:credentials>
+						<con:username>test</con:username>
+						<con:password>test1234</con:password>
+						<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+						<con:addedBasicAuthenticationTypes>Basic
+						</con:addedBasicAuthenticationTypes>
+						<con:authType>Global HTTP Settings</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT" />
+					<con:jmsPropertyConfig />
+					<con:parameters />
+					<con:parameterOrder />
+				</con:request>
+			</con:method>
+			<con:method name="Get" id="9a8ae2cc-dd48-47fb-8a54-6ffb621accec"
+				method="GET">
+				<con:settings />
+				<con:parameters>
+					<con:parameter>
+						<con:name>id</con:name>
+						<con:value>1</con:value>
+						<con:style>QUERY</con:style>
+						<con:default>1</con:default>
+						<con:path xsi:nil="true" />
+						<con:description xsi:nil="true" />
+					</con:parameter>
+				</con:parameters>
+				<con:representation type="FAULT">
+					<con:mediaType xsi:nil="true" />
+					<con:status>404</con:status>
+					<con:params />
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>application/json;charset=UTF-8</con:mediaType>
+					<con:status>401 404 415</con:status>
+					<con:params />
+					<con:element xmlns:user="http://localhost/retrieve/${symbol_dollar}{artifactId}.user">user:Fault</con:element>
+				</con:representation>
+				<con:request name="retrieve" id="3f464d61-09d7-43d5-bd8d-ad779a8707f5"
+					mediaType="application/json">
+					<con:settings>
+						<con:setting
+							id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://localhost:8080/SampleService-rs/retrieve
+					</con:endpoint>
+					<con:request />
+					<con:originalUri>http://localhost/retrieve/${symbol_dollar}{artifactId}.user
+					</con:originalUri>
+					<con:credentials>
+						<con:username>test</con:username>
+						<con:password>test1234</con:password>
+						<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+						<con:addedBasicAuthenticationTypes>Basic
+						</con:addedBasicAuthenticationTypes>
+						<con:authType>Global HTTP Settings</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT" />
+					<con:jmsPropertyConfig />
+					<con:parameters />
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:properties />
+	<con:wssContainer />
+	<con:oAuth2ProfileContainer />
+	<con:oAuth1ProfileContainer />
+</con:soapui-project>

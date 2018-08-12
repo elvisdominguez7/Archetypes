@@ -1,0 +1,1 @@
+INSERT INTO ${artifactId}.user (first_name,last_name) VALUES (:firstName, :lastName);

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	name="Demo"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<modules>
+		<module id="${rootArtifactId}-core" dir="__rootArtifactId__-core"
+			name="${rootArtifactId}-core">
+			<fileSets>
+				<fileSet encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>mvnw.cmd</include>
+						<include>.gitignore</include>
+						<include>mvnw</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+			<modules>
+				<module id="${rootArtifactId}-logic" dir="__rootArtifactId__-logic"
+					name="${rootArtifactId}-logic">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}-persistance" dir="__rootArtifactId__-persistance"
+					name="${rootArtifactId}-persistance">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}-security" dir="__rootArtifactId__-security"
+					name="${rootArtifactId}-security">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}-logger" dir="__rootArtifactId__-logger"
+					name="${rootArtifactId}-logger">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}-provisioning" dir="__rootArtifactId__-provisioning"
+					name="${rootArtifactId}-provisioning">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+			</modules>
+		</module>
+		<module id="${rootArtifactId}-soap" dir="__rootArtifactId__-soap"
+			name="${rootArtifactId}-soap">
+			<fileSets>
+				<fileSet encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>mvnw.cmd</include>
+						<include>.gitignore</include>
+						<include>mvnw</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+			<modules>
+				<module id="${rootArtifactId}-console" dir="__rootArtifactId__-console"
+					name="${rootArtifactId}-console">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+				<module id="${rootArtifactId}-enduser" dir="__rootArtifactId__-enduser"
+					name="${rootArtifactId}-enduser">
+					<fileSets>
+						<fileSet filtered="true" packaged="true" encoding="UTF-8">
+							<directory></directory>
+							<includes>
+								<include>**/**</include>
+							</includes>
+						</fileSet>
+					</fileSets>
+				</module>
+			</modules>
+		</module>
+	</modules>
+</archetype-descriptor>
